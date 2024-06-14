@@ -85,7 +85,7 @@ ENV LC_ALL C.UTF-8
 RUN mkdir ${HOME}/testnet
 COPY --chmod=0755 ./dynex-testnet-bnb ${HOME}/testnet/dynex-testnet-bnb
 
-RUN wget https://github.com/dynexcoin/DynexSDK/blob/main/Dynex_hello_world.ipynb -P ${HOME}
+RUN wget https://raw.githubusercontent.com/dynexcoin/DynexSDK/main/Dynex_hello_world.ipynb -P ${HOME}
 
 # install frequently used packages & make sure to keep DynexSDK up to date every boot
 RUN --mount=type=cache,mode=0777,target=/home/${USER}/.cache,uid=${UID},gid=${GID} \
